@@ -1,0 +1,30 @@
+<h2 class="text-center p-2 border-bottom">
+  Component Life Cycle<br>
+  Content Projection
+</h2>
+<div class="p-2">
+  <input #txt type="text" class="form-control" placeholder="Enter something here"
+         (input)="value = txt.value">
+  <div class="p-2">
+    <app-child #child [value]="value" [first]="'abc'" [seconds]="'hi'">
+      <div id="div-1">First div</div>
+      <div class="dep">Second div</div>
+      <p class="dep">Third div</p>
+      <h3>I want to add something here</h3>
+      <button>I want to add a button</button>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+        and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+        leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with
+        the release of sheets containing Lorem
+        Ipsum passages, and more recently with desktop
+        publishing software like Aldus PageMaker including
+        versions of Lorem Ipsum.</p>
+      <button>Another button</button>
+      <input type="text">
+      <input type="checkbox">
+      <h1 #crazy ngProjectAs="crazy-stuff" [style.background-color]="'yellow'">My New HTML Element</h1>
+    </app-child>
+  </div>
+
+</div>
